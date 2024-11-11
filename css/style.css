@@ -551,7 +551,7 @@ body {
 .hero-header h1, .hero-header p {
     color: #fff;
 }
-/* 
+
 .quote-section {
     background-color: #f8f9fa;
     padding: 20px;
@@ -608,82 +608,9 @@ body {
 
 .quote-section .btn-primary:hover {
     background-color: #45a049;
-} */
+}
 
-/* Glassy Background for the Quote Section */
-.quote-section-modern {
-    background: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
-    backdrop-filter: blur(12px); /* Frosted glass effect */
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
-    border-radius: 15px;
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 40px;
-    transition: box-shadow 0.3s ease, transform 0.2s ease;
-  }
-  .quote-section-modern:hover {
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-    transform: translateY(-4px); /* Slight lift on hover */
-  }
-  
-  /* Container Styling */
-  .form-container-modern {
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-end;
-  }
-  
-  /* Label and Input Styling */
-  .form-label-modern {
-    display: block;
-    font-weight: 600;
-    color: #444;
-    margin-bottom: 6px;
-  }
-  .form-select-modern, .form-control-modern {
-    width: 100%;
-    padding: 12px;
-    font-size: 1rem;
-    color: #333;
-    background: rgba(240, 245, 255, 0.8); /* Light frosted effect */
-    border: 1px solid transparent;
-    border-radius: 12px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  }
-  .form-select-modern:focus, .form-control-modern:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 10px rgba(90, 158, 246, 0.4);
-    outline: none;
-  }
-  
-  /* Button Styling with Subtle Gradient and Shadow */
-  .getbtn-modern {
-    font-size: 1rem;
-    padding: 12px 35px;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    color: #fff;
-    border: none;
-    border-radius: 25px;
-    font-weight: 600;
-    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
-    cursor: pointer;
-  }
-  .getbtn-modern:hover {
-    background: linear-gradient(135deg, #2575fc, #6a11cb);
-    box-shadow: 0 8px 16px rgba(102, 145, 234, 0.2);
-    transform: translateY(-3px);
-  }
 
-  /* Bounce Animation */
-.getbtn-modern.clicked {
-    animation: bounce 0.3s ease forwards;
-  }
-  
-  @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
-  }
   
   
 
@@ -1018,19 +945,20 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .map-section {
-    flex-direction: column;
-    align-items: center;
-  }
-  .map-image {
-    width: 80%;
+    .map-image {
+      width: 70%; /* Reduce width on mobile */
+    }
+    .map-image img {
+      width: 100%; /* Make the image fill its container */
+      max-width: 300px; /* Further reduce max width for mobile */
+    }
   }
   .categories {
     flex-direction: row;
     gap: 10px;
     flex-wrap: wrap;
   }
-}
+
 
 .category-item {
     display: flex;
