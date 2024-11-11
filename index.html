@@ -177,7 +177,7 @@
             </div>
           </div>
           <!-- Quote Form Start -->
-          <div
+          <!-- <div
             class="quote-section bg-light p-4 rounded-3 mx-auto text-center animated slideInUp"
             style="max-width: 800px"
           >
@@ -211,7 +211,77 @@
               </div>
               <button class="btn btn-primary mt-auto mb-2">Get Quote</button>
             </div>
+          </div> -->
+
+          <div
+            class="quote-section-modern bg-light p-5 rounded-3 mx-auto text-center animated slideInUp"
+            style="max-width: 700px"
+          >
+            <h4 class="mb-4">Get Your Personalized Quote</h4>
+            <p class="mb-4 text-muted">
+              Choose your destination and duration to receive a custom travel
+              quote.
+            </p>
+            <div
+              class="form-container-modern d-flex flex-wrap justify-content-center"
+            >
+              <!-- Tour Country Dropdown -->
+              <div class="form-group-modern me-2 mb-3">
+                <label for="tour-country" class="form-label-modern"
+                  >Tour Country:</label
+                >
+                <select id="tour-country" class="form-select-modern">
+                  <option value="Maldives">Maldives</option>
+                  <option value="Sri Lanka">Sri Lanka</option>
+                  <option value="Thailand">Thailand</option>
+                </select>
+              </div>
+
+              <!-- Tour Duration Dropdown -->
+              <div class="form-group-modern me-2 mb-3">
+                <label for="tour-duration" class="form-label-modern"
+                  >Tour Duration:</label
+                >
+                <select id="tour-duration" class="form-select-modern">
+                  <option value="1 week">1 week</option>
+                  <option value="2 weeks">2 weeks</option>
+                  <option value="1 month">1 month</option>
+                </select>
+              </div>
+
+              <!-- Travelling Date Input -->
+              <div class="form-group-modern mb-3">
+                <label for="travelling-date" class="form-label-modern"
+                  >Travelling Date:</label
+                >
+                <input
+                  type="date"
+                  id="travelling-date"
+                  class="form-control-modern"
+                />
+              </div>
+
+              <!-- Get Quote Button -->
+              <div class="d-flex justify-content-center w-100 mt-3">
+                <button class="getbtn-modern btn-primary-modern">Get Quote</button>
+              </div>
+            </div>
           </div>
+
+          <script>
+            // JavaScript to add a bounce effect to the button on click
+            document
+              .querySelector(".getbtn-modern")
+              .addEventListener("click", function () {
+                this.classList.add("clicked");
+
+                // Remove the class after animation is complete
+                setTimeout(() => {
+                  this.classList.remove("clicked");
+                }, 300); // Adjust timing to match the animation duration
+              });
+          </script>
+
           <!-- Quote Form End -->
         </div>
       </div>
@@ -499,60 +569,128 @@
           <h1 class="mb-5">Awesome Packages</h1>
         </div>
         <div class="row g-4 justify-content-center">
-          <!-- Package Item 1 -->
+          <!-- Redesigned Package Item -->
           <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="package-item">
-              <div class="overflow-hidden">
+            <div class="package-item-modern">
+              <div class="image-container">
                 <img
                   class="img-fluid"
                   src="img/package-1.jpg"
                   alt="Package 1"
                 />
+                <div class="price-tag">From $149.00</div>
               </div>
-              <div class="d-flex border-bottom">
-                <small class="flex-fill text-center border-end py-2">
-                  <i class="fa fa-map-marker-alt text-primary me-2"></i>Galle
-                </small>
-                <small class="flex-fill text-center border-end py-2">
-                  <i class="fa fa-calendar-alt text-primary me-2"></i>3 days
-                </small>
-                <small class="flex-fill text-center py-2">
-                  <i class="fa fa-user text-primary me-2"></i>2 Person
-                </small>
-              </div>
-              <div class="text-center p-4">
-                <h3 class="mb-0">From US $149.00</h3>
-                <div class="mb-3">
-                  <small class="fa fa-star text-primary"></small>
-                  <small class="fa fa-star text-primary"></small>
-                  <small class="fa fa-star text-primary"></small>
-                  <small class="fa fa-star text-primary"></small>
-                  <small class="fa fa-star text-primary"></small>
-                </div>
-                <p>
-                  Stay in a luxurious beachfront resort with stunning ocean
-                  views...
+              <div class="package-content">
+                <h5 class="package-title">Luxurious Beachfront Resort</h5>
+                <p class="package-description">
+                  Enjoy a 3-day stay in Galle with stunning ocean views and
+                  deluxe accommodations.
                 </p>
-                <div class="d-flex justify-content-center mb-2">
-                  <a
-                    href="#"
-                    class="btn btn-sm btn-primary px-3 border-end"
-                    style="border-radius: 30px 0 0 30px"
-                    >Read More</a
+                <div
+                  class="package-info d-flex justify-content-between text-muted"
+                >
+                  <span
+                    ><i class="fa fa-map-marker-alt me-1 text-primary"></i
+                    >Galle</span
                   >
-                  <a
-                    href="#"
-                    class="btn btn-sm btn-primary px-3"
-                    style="border-radius: 0 30px 30px 0"
-                    >Book Now</a
+                  <span
+                    ><i class="fa fa-calendar-alt me-1 text-primary"></i>3
+                    days</span
                   >
+                  <span
+                    ><i class="fa fa-user me-1 text-primary"></i>2 Persons</span
+                  >
+                </div>
+                <div class="d-flex justify-content-between mt-3">
+                  <a href="#" class="btn-modern">Read More</a>
+                  <a href="#" class="btn-modern btn-primary">Book Now</a>
                 </div>
               </div>
             </div>
           </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="package-item-modern">
+              <div class="image-container">
+                <img
+                  class="img-fluid"
+                  src="img/package-1.jpg"
+                  alt="Package 1"
+                />
+                <div class="price-tag">From $149.00</div>
+              </div>
+              <div class="package-content">
+                <h5 class="package-title">Luxurious Beachfront Resort</h5>
+                <p class="package-description">
+                  Enjoy a 3-day stay in Galle with stunning ocean views and
+                  deluxe accommodations.
+                </p>
+                <div
+                  class="package-info d-flex justify-content-between text-muted"
+                >
+                  <span
+                    ><i class="fa fa-map-marker-alt me-1 text-primary"></i
+                    >Galle</span
+                  >
+                  <span
+                    ><i class="fa fa-calendar-alt me-1 text-primary"></i>3
+                    days</span
+                  >
+                  <span
+                    ><i class="fa fa-user me-1 text-primary"></i>2 Persons</span
+                  >
+                </div>
+                <div class="d-flex justify-content-between mt-3">
+                  <a href="#" class="btn-modern">Read More</a>
+                  <a href="#" class="btn-modern btn-primary">Book Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="package-item-modern">
+              <div class="image-container">
+                <img
+                  class="img-fluid"
+                  src="img/package-1.jpg"
+                  alt="Package 1"
+                />
+                <div class="price-tag">From $149.00</div>
+              </div>
+              <div class="package-content">
+                <h5 class="package-title">Luxurious Beachfront Resort</h5>
+                <p class="package-description">
+                  Enjoy a 3-day stay in Galle with stunning ocean views and
+                  deluxe accommodations.
+                </p>
+                <div
+                  class="package-info d-flex justify-content-between text-muted"
+                >
+                  <span
+                    ><i class="fa fa-map-marker-alt me-1 text-primary"></i
+                    >Galle</span
+                  >
+                  <span
+                    ><i class="fa fa-calendar-alt me-1 text-primary"></i>3
+                    days</span
+                  >
+                  <span
+                    ><i class="fa fa-user me-1 text-primary"></i>2 Persons</span
+                  >
+                </div>
+                <div class="d-flex justify-content-between mt-3">
+                  <a href="#" class="btn-modern">Read More</a>
+                  <a href="#" class="btn-modern btn-primary">Book Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Repeat for other packages as needed -->
+        </div>
+      </div>
+    </div>
 
-          <!-- Package Item 2 -->
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+    <!-- Package Item 2 -->
+    <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
             <div class="package-item">
               <div class="overflow-hidden">
                 <img
@@ -599,10 +737,10 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
-          <!-- Package Item 3 -->
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+    <!-- Package Item 3 -->
+    <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
             <div class="package-item">
               <div class="overflow-hidden">
                 <img
@@ -653,7 +791,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- Package End -->
 
     <div class="containerIsland">
@@ -744,12 +882,26 @@
         markers.forEach((marker) => map.removeLayer(marker));
         markers = [];
 
+        // Create a bounds object to fit all markers
+        const bounds = L.latLngBounds();
+
         locations.forEach((location) => {
           const marker = L.marker([location.lat, location.lng])
             .addTo(map)
-            .bindPopup(`<b>${location.name}</b>`);
+            .bindPopup(`<b>${location.name}</b>`); // Fixed the HTML tag syntax
           markers.push(marker);
+
+          // Extend the bounds to include this marker's position
+          bounds.extend([location.lat, location.lng]);
         });
+
+        // If there are locations, fly the map to the bounds of the markers
+        if (locations.length > 0) {
+          map.flyToBounds(bounds, { padding: [50, 50] });
+        } else {
+          // If no locations, reset the map view to the default location
+          map.setView([7.8731, 80.7718], 7);
+        }
       }
 
       $(".category-btn").click(function () {
