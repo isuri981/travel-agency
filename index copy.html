@@ -18,13 +18,6 @@
       rel="stylesheet"
     />
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    />
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-
     <!-- Icon Font Stylesheet -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
@@ -656,148 +649,52 @@
     </div>
     <!-- Package End -->
 
+
     <div class="containerIsland">
-      <h1>Our Island</h1>
-      <p>Sri Lanka</p>
-      <a href="#" class="view-experiences">View All Experiences &rarr;</a>
-
-      <div class="map-section">
-        <!-- Categories on the left -->
-        <div class="categories category-left">
-          <!-- <div class="category-item">
-            <img src="img/beache.jpg" alt="Beaches" />
-            <button class="category-btn" data-category="wildlife">Popular Beaches</button>
-          </div> -->
-          <div class="category-item">
-            <div class="category-content">
-              <img src="img/beache.jpg" alt="Beaches" />
-              <span class="category-btn" data-category="beaches"
-                >Popular Beaches</span
-              >
+        <h1>Our Island</h1>
+        <p>Sri Lanka</p>
+        <a href="#" class="view-experiences">View All Experiences &rarr;</a>
+        
+        <div class="map-section">
+          <!-- Categories on the left -->
+          <div class="categories category-left">
+            <div class="category-item">
+              <img src="img/beache.jpg" alt="Beaches"> Popular Beaches
+            </div>
+            <div class="category-item">
+              <img src="img/wildlife.jpg" alt="Wildlife"> Wildlife & Nature
+            </div>
+            <div class="category-item">
+              <img src="img/adventure.jpg" alt="Adventure"> Adventure
             </div>
           </div>
-
-          <div class="category-item">
-            <div class="category-content">
-              <img src="img/wildlife.jpg" alt="Wildlife" />
-              <span class="category-btn" data-category="wildlife"
-                >Wildlife & Nature</span
-              >
-            </div>
+          
+          <!-- Map of Sri Lanka -->
+          <div class="map-image">
+            <img src="img/SriLankatravelmap.jpg" alt="Map of Sri Lanka" style="width:100%;">
+            <!-- Map Markers -->
+            <div class="marker kalpitiya" data-location="Kalpitiya"></div>
+            <div class="marker bentota" data-location="Bentota"></div>
+            <div class="marker mirissa" data-location="Mirissa"></div>
+            <div class="marker arugam" data-location="Arugam Bay"></div>
           </div>
-          <div class="category-item">
-            <div class="category-content">
-              <img src="img/adventure.jpg" alt="" />
-              <span class="category-btn" data-category="adventure"
-                >Adventure</span
-              >
+          
+          <!-- Categories on the right -->
+          <div class="categories category-right">
+            <div class="category-item">
+              <img src="img/Culture.jpg" alt="Culture"> History & Culture
             </div>
-          </div>
-        </div>
-
-        <!-- Map of Sri Lanka -->
-        <div id="map" style="width: 100%; height: 500px"></div>
-
-        <!-- Categories on the right -->
-        <div class="categories category-right">
-          <div class="category-item">
-            <div class="category-content">
-              <img src="img/Culture.jpg" alt="Culture" />
-              <span class="category-btn" data-category="Culture"
-                >History & Culture</span
-              >
+            <div class="category-item">
+              <img src="img/Less-Travelled.png" alt="Lesser Travelled"> Lesser Travelled
             </div>
-          </div>
-          <div class="category-item">
-            <div class="category-content">
-              <img src="img/Less-Travelled.png" alt="Lesser Travelled" />
-              <span class="category-btn" data-category="less-travelled"
-                >Lesser Travelled</span
-              >
-            </div>
-          </div>
-          <div class="category-item">
-            <div class="category-content">
-              <img src="img/Gatronomy.jpg" alt="Gastronomy" />
-              <span class="category-btn" data-category="Gastronomy"
-                >Gastronomy</span
-              >
+            <div class="category-item">
+              <img src="img/Gatronomy.jpg" alt="Gastronomy"> Gastronomy
             </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <script>
-      let map = L.map("map").setView([7.8731, 80.7718], 7); // Centered on Sri Lanka
-
-      // Load and display the OpenStreetMap tiles
-      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        maxZoom: 18,
-        attribution: "© OpenStreetMap contributors",
-      }).addTo(map);
-
-      let markers = [];
-
-      function addMarkers(locations) {
-        // Clear existing markers
-        markers.forEach((marker) => map.removeLayer(marker));
-        markers = [];
-
-        locations.forEach((location) => {
-          const marker = L.marker([location.lat, location.lng])
-            .addTo(map)
-            .bindPopup(`<b>${location.name}</b>`);
-          markers.push(marker);
-        });
-      }
-
-      $(".category-btn").click(function () {
-        const category = $(this)
-          .data("category")
-          .toLowerCase()
-          .replace(/\s+/g, "-"); // Normalize to lowercase with hyphens
-        let locations = [];
-
-        if (category === "beaches") {
-          locations = [
-            { name: "Unawatuna Beach", lat: 5.9885, lng: 80.2518 },
-            { name: "Mirissa Beach", lat: 5.9484, lng: 80.47 },
-          ];
-        } else if (category === "wildlife") {
-          locations = [
-            { name: "Yala National Park", lat: 6.3638, lng: 81.5218 },
-          ];
-        } else if (category === "adventure") {
-          locations = [
-            {
-              name: "Kitulgala (White Water Rafting)",
-              lat: 6.9882,
-              lng: 80.4216,
-            },
-            { name: "Ella Rock Hiking", lat: 6.8663, lng: 81.0461 },
-          ];
-        } else if (category === "culture") {
-          locations = [
-            { name: "Sigiriya Rock Fortress", lat: 7.9569, lng: 80.7599 },
-            { name: "Temple of the Tooth", lat: 7.2936, lng: 80.6417 },
-          ];
-        } else if (category === "less-travelled") {
-          locations = [
-            { name: "Knuckles Mountain Range", lat: 7.4707, lng: 80.8074 },
-            { name: "Mannar Island", lat: 9.0111, lng: 79.85 },
-          ];
-        } else if (category === "gastronomy") {
-          locations = [
-            { name: "Colombo Street Food Tour", lat: 6.9271, lng: 79.8612 },
-            { name: "Kandy Food Market", lat: 7.2906, lng: 80.6337 },
-          ];
-        }
-
-        addMarkers(locations);
-      });
-    </script>
-
+      
+    
     <!-- Booking Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
       <div class="container">
@@ -1311,6 +1208,7 @@
 
     <!-- JavaScript Libraries -->
     <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
@@ -1320,8 +1218,11 @@
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>    
+
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <!-- <script src="js/map.js"></script> -->
+    <script src="js/map.js"></script>
   </body>
 </html>
