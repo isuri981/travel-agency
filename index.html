@@ -373,7 +373,7 @@
     <!-- About End -->
 
     <!-- Service Start -->
-    <div class="container-xxl py-5">
+    <!-- <div class="container-xxl py-5">
       <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
           <h6 class="section-title bg-white text-center text-primary px-3">
@@ -429,8 +429,8 @@
                 </p>
               </div>
             </div>
-          </div>
-          <!-- <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+          </div> -->
+          **<!-- <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item rounded pt-3">
                         <div class="p-4">
                             <i class="fa fa-3x fa-globe text-primary mb-4"></i>
@@ -560,7 +560,7 @@
     <!-- Destination Start -->
 
     <!-- Package Start -->
-    <div class="container-xxl py-5">
+    <!-- <div class="container-xxl py-5">
       <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
           <h6 class="section-title bg-white text-center text-primary px-3">
@@ -568,9 +568,9 @@
           </h6>
           <h1 class="mb-5">Awesome Packages</h1>
         </div>
-        <div class="row g-4 justify-content-center">
+        <div class="row g-4 justify-content-center"> -->
           <!-- Redesigned Package Item -->
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+          <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <div class="package-item-modern">
               <div class="image-container">
                 <img
@@ -683,7 +683,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- Repeat for other packages as needed -->
         </div>
       </div>
@@ -867,91 +867,91 @@
     </div>
 
     <script>
-      let map = L.map("map").setView([7.8731, 80.7718], 7); // Centered on Sri Lanka
+      // let map = L.map("map").setView([7.8731, 80.7718], 7); // Centered on Sri Lanka
 
       // Load and display the OpenStreetMap tiles
-      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        maxZoom: 18,
-        attribution: "© OpenStreetMap contributors",
-      }).addTo(map);
+      // L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      //   maxZoom: 18,
+      //   attribution: "© OpenStreetMap contributors",
+      // }).addTo(map);
 
-      let markers = [];
+      // let markers = [];
 
-      function addMarkers(locations) {
+      // function addMarkers(locations) {
         // Clear existing markers
-        markers.forEach((marker) => map.removeLayer(marker));
-        markers = [];
+        // markers.forEach((marker) => map.removeLayer(marker));
+        // markers = [];
 
         // Create a bounds object to fit all markers
-        const bounds = L.latLngBounds();
+        // const bounds = L.latLngBounds();
 
-        locations.forEach((location) => {
-          const marker = L.marker([location.lat, location.lng])
-            .addTo(map)
-            .bindPopup(`<b>${location.name}</b>`); // Fixed the HTML tag syntax
-          markers.push(marker);
+        // locations.forEach((location) => {
+        //   const marker = L.marker([location.lat, location.lng])
+        //     .addTo(map)
+        //     .bindPopup(`<b>${location.name}</b>`); 
+        //   markers.push(marker);
 
           // Extend the bounds to include this marker's position
-          bounds.extend([location.lat, location.lng]);
-        });
+        //   bounds.extend([location.lat, location.lng]);
+        // });
 
         // If there are locations, fly the map to the bounds of the markers
-        if (locations.length > 0) {
-          map.flyToBounds(bounds, { padding: [50, 50] });
-        } else {
-          // If no locations, reset the map view to the default location
-          map.setView([7.8731, 80.7718], 7);
-        }
-      }
+      //   if (locations.length > 0) {
+      //     map.flyToBounds(bounds, { padding: [50, 50] });
+      //   } else {
+      //     // If no locations, reset the map view to the default location
+      //     map.setView([7.8731, 80.7718], 7);
+      //   }
+      // }
 
-      $(".category-btn").click(function () {
-        const category = $(this)
-          .data("category")
-          .toLowerCase()
-          .replace(/\s+/g, "-"); // Normalize to lowercase with hyphens
-        let locations = [];
+    //   $(".category-btn").click(function () {
+    //     const category = $(this)
+    //       .data("category")
+    //       .toLowerCase()
+    //       .replace(/\s+/g, "-"); 
+    //     let locations = [];
 
-        if (category === "beaches") {
-          locations = [
-            { name: "Unawatuna Beach", lat: 5.9885, lng: 80.2518 },
-            { name: "Mirissa Beach", lat: 5.9484, lng: 80.47 },
-          ];
-        } else if (category === "wildlife") {
-          locations = [
-            { name: "Yala National Park", lat: 6.3638, lng: 81.5218 },
-          ];
-        } else if (category === "adventure") {
-          locations = [
-            {
-              name: "Kitulgala (White Water Rafting)",
-              lat: 6.9882,
-              lng: 80.4216,
-            },
-            { name: "Ella Rock Hiking", lat: 6.8663, lng: 81.0461 },
-          ];
-        } else if (category === "culture") {
-          locations = [
-            { name: "Sigiriya Rock Fortress", lat: 7.9569, lng: 80.7599 },
-            { name: "Temple of the Tooth", lat: 7.2936, lng: 80.6417 },
-          ];
-        } else if (category === "less-travelled") {
-          locations = [
-            { name: "Knuckles Mountain Range", lat: 7.4707, lng: 80.8074 },
-            { name: "Mannar Island", lat: 9.0111, lng: 79.85 },
-          ];
-        } else if (category === "gastronomy") {
-          locations = [
-            { name: "Colombo Street Food Tour", lat: 6.9271, lng: 79.8612 },
-            { name: "Kandy Food Market", lat: 7.2906, lng: 80.6337 },
-          ];
-        }
+    //     if (category === "beaches") {
+    //       locations = [
+    //         { name: "Unawatuna Beach", lat: 5.9885, lng: 80.2518 },
+    //         { name: "Mirissa Beach", lat: 5.9484, lng: 80.47 },
+    //       ];
+    //     } else if (category === "wildlife") {
+    //       locations = [
+    //         { name: "Yala National Park", lat: 6.3638, lng: 81.5218 },
+    //       ];
+    //     } else if (category === "adventure") {
+    //       locations = [
+    //         {
+    //           name: "Kitulgala (White Water Rafting)",
+    //           lat: 6.9882,
+    //           lng: 80.4216,
+    //         },
+    //         { name: "Ella Rock Hiking", lat: 6.8663, lng: 81.0461 },
+    //       ];
+    //     } else if (category === "culture") {
+    //       locations = [
+    //         { name: "Sigiriya Rock Fortress", lat: 7.9569, lng: 80.7599 },
+    //         { name: "Temple of the Tooth", lat: 7.2936, lng: 80.6417 },
+    //       ];
+    //     } else if (category === "less-travelled") {
+    //       locations = [
+    //         { name: "Knuckles Mountain Range", lat: 7.4707, lng: 80.8074 },
+    //         { name: "Mannar Island", lat: 9.0111, lng: 79.85 },
+    //       ];
+    //     } else if (category === "gastronomy") {
+    //       locations = [
+    //         { name: "Colombo Street Food Tour", lat: 6.9271, lng: 79.8612 },
+    //         { name: "Kandy Food Market", lat: 7.2906, lng: 80.6337 },
+    //       ];
+    //     }
 
-        addMarkers(locations);
-      });
+    //     addMarkers(locations);
+    //   });
     </script>
 
     <!-- Booking Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <!-- <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
       <div class="container">
         <div class="booking p-5">
           <div class="row g-5 align-items-center">
@@ -1053,7 +1053,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- Booking Start -->
 
     <!-- Process Start -->
