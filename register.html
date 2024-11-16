@@ -3,129 +3,266 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travelitch - Modal Example</title>
+  <title>Travelitch - Register</title>
   <style>
-    /* Basic Reset */
+    /* Reset and Body Styles */
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
 
-    /* Button Style */
-    .btn {
-      background-color: #007BFF;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
+    /* Auth Container */
+    .auth-container {
+      width: 100%;
+      max-width: 400px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      position: relative;
     }
 
-    .btn:hover {
-      background-color: #0056b3;
-    }
-
-    /* Modal Overlay */
-    .modal-overlay {
-      display: none;
-      position: fixed;
+    /* Background Overlay */
+    .background-overlay {
+      position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      z-index: 999;
+      height: 150px;
+      background: linear-gradient(45deg, #007BFF, #0056b3);
+      z-index: -1;
     }
 
-    /* Modal Dialog */
-    .modal-dialog {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: white;
-      width: 90%;
-      max-width: 400px;
-      border-radius: 10px;
-      overflow: hidden;
-      z-index: 1000;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    .modal-header {
-      background: #007BFF;
-      color: white;
-      padding: 15px;
-      font-size: 18px;
-      font-weight: bold;
+    /* Form Wrapper */
+    .auth-form {
+      padding: 30px 20px;
       text-align: center;
     }
 
-    .modal-body {
-      padding: 20px;
-      font-size: 16px;
-      line-height: 1.6;
+    .auth-title {
+      color: #007BFF;
+      font-size: 24px;
+      margin-bottom: 20px;
     }
 
-    .modal-footer {
-      text-align: center;
+    .form-group {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .form-group input {
+      width: 100%;
       padding: 10px;
-      border-top: 1px solid #ccc;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
     }
 
-    .modal-footer .close-btn {
-      background: #007BFF;
+    .form-group input:focus {
+      outline: none;
+      border-color: #007BFF;
+      box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+    }
+
+    .auth-button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007BFF;
       color: white;
-      padding: 10px 20px;
       border: none;
       border-radius: 5px;
+      font-size: 16px;
       cursor: pointer;
     }
 
-    .modal-footer .close-btn:hover {
-      background: #0056b3;
+    .auth-button:hover {
+      background-color: #0056b3;
+    }
+
+    .auth-switch {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .auth-switch a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    .auth-switch a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <!-- Register Button -->
-  <button class="btn" id="openModal">Register</button>
+  <div class="auth-container">
+    <!-- Background Overlay -->
+    <div class="background-overlay"></div>
 
-  <!-- Modal Structure -->
-  <div class="modal-overlay" id="modalOverlay">
-    <div class="modal-dialog">
-      <div class="modal-header">Register for Travelitch</div>
-      <div class="modal-body">
-        <p>Welcome to Travelitch! Create your account to explore amazing travel packages, plan your trips, and enjoy exclusive offers. Complete the registration form to get started.</p>
-      </div>
-      <div class="modal-footer">
-        <button class="close-btn" id="closeModal">Close</button>
-      </div>
+    <!-- Form Wrapper -->
+    <div class="auth-form">
+      <h1 class="auth-title">Create Your Account</h1>
+      <form action="/register-success" method="post">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Create a password" required>
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+        </div>
+        <button type="submit" class="auth-button">Register</button>
+      </form>
+      <p class="auth-switch">Already have an account? <a href="login.html">Login here</a></p>
     </div>
   </div>
-
-  <script>
-    // Modal Logic
-    const openModal = document.getElementById("openModal");
-    const closeModal = document.getElementById("closeModal");
-    const modalOverlay = document.getElementById("modalOverlay");
-
-    openModal.addEventListener("click", () => {
-      modalOverlay.style.display = "block";
-    });
-
-    closeModal.addEventListener("click", () => {
-      modalOverlay.style.display = "none";
-    });
-
-    // Close modal when clicking outside the dialog
-    modalOverlay.addEventListener("click", (event) => {
-      if (event.target === modalOverlay) {
-        modalOverlay.style.display = "none";
-      }
-    });
-  </script>
 </body>
 </html>
+
+    <!-- Footer Start -->
+    <div
+      class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-white mb-3">Company</h4>
+            <a class="btn btn-link" href="">About Us</a>
+            <a class="btn btn-link" href="">Contact Us</a>
+            <a class="btn btn-link" href="">Privacy Policy</a>
+            <a class="btn btn-link" href="">Terms & Condition</a>
+            <a class="btn btn-link" href="">FAQs & Help</a>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-white mb-3">Contact</h4>
+            <p class="mb-2">
+              <i class="fa fa-map-marker-alt me-3"></i>North-Western Province
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-phone-alt me-3"></i>+94 77 111 7298
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-envelope me-3"></i>tharindunayanasiri@gmail.com
+            </p>
+            <div class="d-flex pt-2">
+              <a class="btn btn-outline-light btn-social" href=""
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a class="btn btn-outline-light btn-social" href=""
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a class="btn btn-outline-light btn-social" href=""
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a class="btn btn-outline-light btn-social" href=""
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-white mb-3">Gallery</h4>
+            <div class="row g-2 pt-2">
+              <div class="col-4">
+                <img class="img-fluid bg-light p-1" src="img/package-1.jpg" alt=""/>
+              </div>
+              <div class="col-4">
+                <img class="img-fluid bg-light p-1" src="img/package-2.jpg" alt=""/>
+              </div>
+              <div class="col-4">
+                <img class="img-fluid bg-light p-1" src="img/package-3.jpg" alt=""/>
+              </div>
+              <div class="col-4">
+                <img class="img-fluid bg-light p-1" src="img/package-2.jpg" alt=""/>
+              </div>
+              <div class="col-4">
+                <img class="img-fluid bg-light p-1" src="img/package-3.jpg" alt=""/>
+              </div>
+              <div class="col-4">
+                <img class="img-fluid bg-light p-1" src="img/package-1.jpg" alt=""/>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-white mb-3">Newsletter</h4>
+            <p>
+              Discover new travel packages, enjoy exclusive discounts, get
+              travel tips from our blog, stay inspired on social media, and book
+              your dream getaway today!
+            </p>
+            <div class="position-relative mx-auto" style="max-width: 400px">
+              <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email"/>
+              <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
+                SignUp
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+              &copy; <a class="border-bottom" href="#">Travelitch Sri Lanka</a>,
+              All Right Reserved.
+
+              <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+              Designed By <a class="border-bottom">Isu &#10084;&#65039;</a>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <div class="footer-menu">
+                <a href="">Home</a>
+                <a href="">Cookies</a>
+                <a href="">Help</a>
+                <a href="">FQAs</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <!-- <script src="js/map.js"></script> -->
+  </body>
+</html>
+
