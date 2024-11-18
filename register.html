@@ -1,113 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travelitch - Register</title>
-  <style>
-    /* Reset and Body Styles */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+  <head>
+    <meta charset="utf-8" />
+    <title>TRAVELITCH</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
 
-    /* Auth Container */
-    .auth-container {
-      width: 100%;
-      max-width: 400px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      position: relative;
-    }
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
 
-    /* Background Overlay */
-    .background-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 150px;
-      background: linear-gradient(45deg, #007BFF, #0056b3);
-      z-index: -1;
-    }
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet"/>
 
-    /* Form Wrapper */
-    .auth-form {
-      padding: 30px 20px;
-      text-align: center;
-    }
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
-    .auth-title {
-      color: #007BFF;
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet"/>
 
-    .form-group {
-      margin-bottom: 15px;
-      text-align: left;
-    }
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet"/>
 
-    .form-group label {
-      display: block;
-      font-size: 14px;
-      color: #333;
-      margin-bottom: 5px;
-    }
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
-    .form-group input {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 14px;
-    }
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
 
-    .form-group input:focus {
-      outline: none;
-      border-color: #007BFF;
-      box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
-    }
-
-    .auth-button {
-      width: 100%;
-      padding: 10px;
-      background-color: #007BFF;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .auth-button:hover {
-      background-color: #0056b3;
-    }
-
-    .auth-switch {
-      margin-top: 15px;
-      font-size: 14px;
-      color: #555;
-    }
-
-    .auth-switch a {
-      color: #007BFF;
-      text-decoration: none;
-    }
-
-    .auth-switch a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  
 </head>
+<style>
+  /* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #bdf7bd);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Container */
+  .auth-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+  
+  /* Background Overlay */
+  .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(102, 204, 102, 0.1);
+    z-index: 1;
+  }
+  
+  /* Form Wrapper */
+  .auth-form {
+    position: relative;
+    z-index: 2;
+    padding: 20px 30px;
+    
+  }
+  
+  .auth-title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Form Group */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    border-color: #66cc66;
+    outline: none;
+  }
+  
+  /* Button */
+  .auth-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: #fff;
+    background: #66cc66;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .auth-button:hover {
+    background: #57b757;
+  }
+  
+  /* Switch to Login */
+  .auth-switch {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .auth-switch a {
+    color: #66cc66;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .auth-switch a:hover {
+    color: #57b757;
+  }
+  
+  
+</style>
 <body>
+  
+
+  
+
+
+
   <div class="auth-container">
     <!-- Background Overlay -->
     <div class="background-overlay"></div>
@@ -137,132 +191,11 @@
       <p class="auth-switch">Already have an account? <a href="login.html">Login here</a></p>
     </div>
   </div>
+
+    <!-- Footer Start -->
+    
 </body>
 </html>
 
-    <!-- Footer Start -->
-    <div
-      class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn"
-      data-wow-delay="0.1s"
-    >
-      <div class="container py-5">
-        <div class="row g-5">
-          <div class="col-lg-3 col-md-6">
-            <h4 class="text-white mb-3">Company</h4>
-            <a class="btn btn-link" href="">About Us</a>
-            <a class="btn btn-link" href="">Contact Us</a>
-            <a class="btn btn-link" href="">Privacy Policy</a>
-            <a class="btn btn-link" href="">Terms & Condition</a>
-            <a class="btn btn-link" href="">FAQs & Help</a>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <h4 class="text-white mb-3">Contact</h4>
-            <p class="mb-2">
-              <i class="fa fa-map-marker-alt me-3"></i>North-Western Province
-            </p>
-            <p class="mb-2">
-              <i class="fa fa-phone-alt me-3"></i>+94 77 111 7298
-            </p>
-            <p class="mb-2">
-              <i class="fa fa-envelope me-3"></i>tharindunayanasiri@gmail.com
-            </p>
-            <div class="d-flex pt-2">
-              <a class="btn btn-outline-light btn-social" href=""
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a class="btn btn-outline-light btn-social" href=""
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a class="btn btn-outline-light btn-social" href=""
-                ><i class="fab fa-youtube"></i
-              ></a>
-              <a class="btn btn-outline-light btn-social" href=""
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <h4 class="text-white mb-3">Gallery</h4>
-            <div class="row g-2 pt-2">
-              <div class="col-4">
-                <img class="img-fluid bg-light p-1" src="img/package-1.jpg" alt=""/>
-              </div>
-              <div class="col-4">
-                <img class="img-fluid bg-light p-1" src="img/package-2.jpg" alt=""/>
-              </div>
-              <div class="col-4">
-                <img class="img-fluid bg-light p-1" src="img/package-3.jpg" alt=""/>
-              </div>
-              <div class="col-4">
-                <img class="img-fluid bg-light p-1" src="img/package-2.jpg" alt=""/>
-              </div>
-              <div class="col-4">
-                <img class="img-fluid bg-light p-1" src="img/package-3.jpg" alt=""/>
-              </div>
-              <div class="col-4">
-                <img class="img-fluid bg-light p-1" src="img/package-1.jpg" alt=""/>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <h4 class="text-white mb-3">Newsletter</h4>
-            <p>
-              Discover new travel packages, enjoy exclusive discounts, get
-              travel tips from our blog, stay inspired on social media, and book
-              your dream getaway today!
-            </p>
-            <div class="position-relative mx-auto" style="max-width: 400px">
-              <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email"/>
-              <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
-                SignUp
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="copyright">
-          <div class="row">
-            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-              &copy; <a class="border-bottom" href="#">Travelitch Sri Lanka</a>,
-              All Right Reserved.
 
-              <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-              Designed By <a class="border-bottom">Isu &#10084;&#65039;</a>
-            </div>
-            <div class="col-md-6 text-center text-md-end">
-              <div class="footer-menu">
-                <a href="">Home</a>
-                <a href="">Cookies</a>
-                <a href="">Help</a>
-                <a href="">FQAs</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Footer End -->
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
-      ><i class="bi bi-arrow-up"></i
-    ></a>
-
-    <!-- JavaScript Libraries -->
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-    <!-- <script src="js/map.js"></script> -->
-  </body>
-</html>
 

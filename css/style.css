@@ -1131,6 +1131,9 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f9f9f9;
     color: #333;
+    justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+    
   }
   
   /* Header Styling */
@@ -1204,3 +1207,5 @@ body {
   .explore-button:hover {
     background-color: #0056b3;
   }
+
+  /* General Styles */
