@@ -1,151 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>TRAVELITCH</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="" name="keywords" />
-    <meta content="" name="description" />
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon" />
+<head>
+  <meta charset="utf-8" />
+  <title>TRAVELITCH</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="" name="keywords" />
+  <meta content="" name="description" />
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet"/>
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon" />
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+    rel="stylesheet" />
 
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet"/>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet" />
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet"/>
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet" />
-  </head>
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
 
-  <body>
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-      <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
-        <span class="sr-only">Loading...</span>
-      </div>
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Spinner Start -->
+  <div id="spinner"
+    class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
+      <span class="sr-only">Loading...</span>
     </div>
-    <!-- Spinner End -->
+  </div>
+  <!-- Spinner End -->
 
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
-      <div class="row gx-0">
-        <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
-          <div class="d-inline-flex align-items-center" style="height: 45px">
-            <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>North-Western Province -Sri Lanka</small>
-            <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+94 77 111 7298</small>
-            <small class="text-light"><i class="fa fa-envelope-open me-2"></i>tharindunayanasiri@gmail.com</small>
-          </div>
-        </div>
-        <div class="col-lg-4 text-center text-lg-end">
-          <div class="d-inline-flex align-items-center" style="height: 45px">
-            <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
-            <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.facebook.com/tharindu.nayanasiri.5?mibextid=JRoKGi"><i class="fab fa-facebook-f fw-normal"></i></a>
-            <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.linkedin.com/in/tharindu-nayanasiri-378a07251/"><i class="fab fa-linkedin-in fw-normal"></i></a>
-            <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.instagram.com/tharindu_nayanasiri?igsh=MWptc2k1aGcxMm45bg=="><i class="fab fa-instagram fw-normal"></i></a>
-            <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
-          </div>
+  <!-- Topbar Start -->
+  <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+    <div class="row gx-0">
+      <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+        <div class="d-inline-flex align-items-center" style="height: 45px">
+          <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>North-Western Province -Sri
+            Lanka</small>
+          <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+94 77 111 7298</small>
+          <small class="text-light"><i class="fa fa-envelope-open me-2"></i>tharindunayanasiri@gmail.com</small>
         </div>
       </div>
-    </div>
-    <!-- Topbar End -->
-
-    <!-- Navbar & Hero Start -->
-     <div class="container-fluid position-relative p-0">
-      <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-        <a href="index.html" class="navbar-brand p-0">
-          <h1 class="text-primary m-0">
-            <i class="fa fa-map-marker-alt me-3"></i>TRAVELITCH
-          </h1>
-          <!-- <img src="img/logo.png" alt="Logo"> -->
-         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-          <span class="fa fa-bars"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <div class="navbar-nav ms-auto py-0">
-            <a href="index.html" class="nav-item nav-link active">Home</a>
-            <a href="about.html" class="nav-item nav-link">About</a>
-            <a href="service.html" class="nav-item nav-link">Services</a>
-            <a href="package.html" class="nav-item nav-link">Packages</a>
-            <a href="itenaries.html" class="nav-item nav-link">Itenaries</a>
-
-            <div class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-              <div class="dropdown-menu m-0">
-                <a href="destination.html" class="dropdown-item">Destination</a>
-                <a href="booking.html" class="dropdown-item">Booking</a>
-                <a href="team.html" class="dropdown-item">Travel Guides</a>
-                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-              </div>
-            </div>
-            <a href="contact.html" class="nav-item nav-link">Contact</a>
-          </div>
-          <a href="register.html" class="btn btn-primary rounded-pill py-2 px-4">Register</a>
-
-          <a href="login.html" class="btn btn-primary rounded-pill py-2 px-4">Login</a>
+      <div class="col-lg-4 text-center text-lg-end">
+        <div class="d-inline-flex align-items-center" style="height: 45px">
+          <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+              class="fab fa-twitter fw-normal"></i></a>
+          <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+            href="https://www.facebook.com/tharindu.nayanasiri.5?mibextid=JRoKGi"><i
+              class="fab fa-facebook-f fw-normal"></i></a>
+          <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+            href="https://www.linkedin.com/in/tharindu-nayanasiri-378a07251/"><i
+              class="fab fa-linkedin-in fw-normal"></i></a>
+          <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+            href="https://www.instagram.com/tharindu_nayanasiri?igsh=MWptc2k1aGcxMm45bg=="><i
+              class="fab fa-instagram fw-normal"></i></a>
+          <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i
+              class="fab fa-youtube fw-normal"></i></a>
         </div>
-      </nav>
+      </div>
+    </div>
+  </div>
+  <!-- Topbar End -->
 
-      <div class="container-fluid bg-primary py-5 mb-5 hero-header">
-        <div class="container py-5">
-          <div class="row justify-content-center py-5">
-            <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-              <h1 class="display-3 text-white mb-3 animated slideInDown">
-                Enjoy Your Vacation With Us
-              </h1>
-              <p class="fs-4 text-white mb-4 animated slideInDown">
-                Let us take you on a voyage through paradise.
-              </p>
+  <!-- Navbar & Hero Start -->
+  <div class="container-fluid position-relative p-0">
+    <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+      <a href="index.html" class="navbar-brand p-0">
+        <h1 class="text-primary m-0">
+          <i class="fa fa-map-marker-alt me-3"></i>TRAVELITCH
+        </h1>
+        <!-- <img src="img/logo.png" alt="Logo"> -->
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="fa fa-bars"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto py-0">
+          <a href="index.html" class="nav-item nav-link active">Home</a>
+          <a href="about.html" class="nav-item nav-link">About</a>
+          <a href="service.html" class="nav-item nav-link">Services</a>
+          <a href="package.html" class="nav-item nav-link">Packages</a>
+          <a href="itenaries.html" class="nav-item nav-link">Itenaries</a>
+
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+            <div class="dropdown-menu m-0">
+              <a href="destination.html" class="dropdown-item">Destination</a>
+              <a href="booking.html" class="dropdown-item">Booking</a>
+              <a href="team.html" class="dropdown-item">Travel Guides</a>
+              <a href="testimonial.html" class="dropdown-item">Testimonial</a>
             </div>
           </div>
-          <!-- Quote Form Start -->
-          <div
-            class="quote-section bg-light p-4 rounded-3 mx-auto text-center animated slideInUp" style="max-width: 800px">
-            <h4 class="mb-4">Get Your Personalized Quote</h4>
-            <div class="form-container d-flex justify-content-center">
-              <div class="form-group me-2">
-                <label for="tour-country" class="form-label">Tour Country:</label>
-                <select id="tour-country" class="form-select">
-                  <option value="Maldives">Maldives</option>
-                  <option value="Sri Lanka">Sri Lanka</option>
-                  <option value="Thailand">Thailand</option>
-                </select>
-              </div>
-              <div class="form-group me-2">
-                <label for="tour-duration" class="form-label">Tour Duration:</label>
-                <select id="tour-duration" class="form-select">
-                  <option value="1 week">1 week</option>
-                  <option value="2 weeks">2 weeks</option>
-                  <option value="1 month">1 month</option>
-                </select>
-              </div>
-              <div class="form-group me-2">
-                <label for="travelling-date" class="form-label">Travelling Date:</label>
-                <input type="date" id="travelling-date" class="form-control"/>
-              </div>
-              <button class="btn btn-primary mt-auto mb-2">Get Quote</button>
-            </div>
-          </div>
+          <a href="contact.html" class="nav-item nav-link">Contact</a>
+        </div>
+        <a href="register.html" class="btn btn-primary rounded-pill py-2 px-4">Register</a>
 
-          <!-- <div
+        <a href="login.html" class="btn btn-primary rounded-pill py-2 px-4">Login</a>
+      </div>
+    </nav>
+
+    <div class="container-fluid bg-primary py-5 mb-5 hero-header">
+      <div class="container py-5">
+        <div class="row justify-content-center py-5">
+          <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">
+              Enjoy Your Vacation With Us
+            </h1>
+            <p class="fs-4 text-white mb-4 animated slideInDown">
+              Let us take you on a voyage through paradise.
+            </p>
+          </div>
+        </div>
+        <!-- Quote Form Start -->
+        <div class="quote-section bg-light p-4 rounded-3 mx-auto text-center animated slideInUp"
+          style="max-width: 800px">
+          <h4 class="mb-4">Get Your Personalized Quote</h4>
+          <div class="form-container d-flex justify-content-center">
+            <div class="form-group me-2">
+              <label for="tour-country" class="form-label">Tour Country:</label>
+              <select id="tour-country" class="form-select">
+                <option value="Maldives">Maldives</option>
+                <option value="Sri Lanka">Sri Lanka</option>
+                <option value="Thailand">Thailand</option>
+              </select>
+            </div>
+            <div class="form-group me-2">
+              <label for="tour-duration" class="form-label">Tour Duration:</label>
+              <select id="tour-duration" class="form-select">
+                <option value="1 week">1 week</option>
+                <option value="2 weeks">2 weeks</option>
+                <option value="1 month">1 month</option>
+              </select>
+            </div>
+            <div class="form-group me-2">
+              <label for="travelling-date" class="form-label">Travelling Date:</label>
+              <input type="date" id="travelling-date" class="form-control" />
+            </div>
+            <button class="btn btn-primary mt-auto mb-2">Get Quote</button>
+          </div>
+        </div>
+
+        <!-- <div
             class="quote-section-modern bg-light p-5 rounded-3 mx-auto text-center animated slideInUp"
             style="max-width: 700px"
           >
@@ -157,8 +170,8 @@
             <div
               class="form-container-modern d-flex flex-wrap justify-content-center"
             >  -->
-              <!-- Tour Country Dropdown -->
-              <!-- <div class="form-group-modern me-2 mb-3">
+        <!-- Tour Country Dropdown -->
+        <!-- <div class="form-group-modern me-2 mb-3">
                 <label for="tour-country" class="form-label-modern"
                   >Tour Country:</label
                 >
@@ -169,8 +182,8 @@
                 </select>
               </div> -->
 
-              <!-- Tour Duration Dropdown -->
-              <!-- <div class="form-group-modern me-2 mb-3">
+        <!-- Tour Duration Dropdown -->
+        <!-- <div class="form-group-modern me-2 mb-3">
                 <label for="tour-duration" class="form-label-modern"
                   >Tour Duration:</label
                 >
@@ -181,8 +194,8 @@
                 </select>
               </div> -->
 
-              <!-- Travelling Date Input -->
-              <!-- <div class="form-group-modern mb-3">
+        <!-- Travelling Date Input -->
+        <!-- <div class="form-group-modern mb-3">
                 <label for="travelling-date" class="form-label-modern"
                   >Travelling Date:</label
                 >
@@ -193,167 +206,168 @@
                 />
               </div> -->
 
-               <!-- Get Quote Button -->
-               <!-- <div class="d-flex justify-content-center w-100 mt-3">
+        <!-- Get Quote Button -->
+        <!-- <div class="d-flex justify-content-center w-100 mt-3">
                 <button class="getbtn-modern btn-primary-modern">Get Quote</button>
               </div> -->
+      </div>
+    </div>
+
+    <script>
+      // JavaScript to add a bounce effect to the button on click
+      document
+        .querySelector(".getbtn-modern")
+        .addEventListener("click", function () {
+          this.classList.add("clicked");
+
+          // Remove the class after animation is complete
+          setTimeout(() => {
+            this.classList.remove("clicked");
+          }, 300); // Adjust timing to match the animation duration
+        });
+    </script>
+
+    <!-- Quote Form End -->
+  </div>
+  </div>
+  </div>
+  <!-- Navbar & Hero End -->
+
+  <!-- About Start -->
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px">
+          <div class="position-relative h-100">
+            <img class="img-fluid position-absolute w-100 h-100" src="img/about1.webp" alt=""
+              style="object-fit: cover" />
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+          <h6 class="section-title bg-white text-start text-primary pe-3">
+            About Us
+          </h6>
+          <h1 class="mb-4">
+            Welcome to <span class="text-primary">TRAVELITCH</span>
+          </h1>
+          <p class="mb-4">
+            Welcome to TRAVELITCH, where every journey is crafted to tell a
+            unique story. Based in the heart of Sri Lanka, we specialize in
+            creating unforgettable travel experiences that showcase the
+            island’s natural beauty, rich culture, and hidden gems. Whether
+            you seek relaxation, adventure, or cultural exploration, we are
+            here to guide you.
+          </p>
+          <p class="mb-4">
+            Our mission is to make your travel dreams come true through
+            personalized service and expert planning. With local insights and
+            a commitment to exceptional service, we ensure your journey
+            through Sri Lanka is seamless, memorable, and truly extraordinary.
+          </p>
+          <div class="row gy-2 gx-4 mb-4">
+            <div class="col-sm-6">
+              <p class="mb-0">
+                <i class="fa fa-arrow-right text-primary me-2"></i>Pick You
+                Flights
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <p class="mb-0">
+                <i class="fa fa-arrow-right text-primary me-2"></i>Handpicked
+                Hotels
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <p class="mb-0">
+                <i class="fa fa-arrow-right text-primary me-2"></i>5 Star
+                Accommodations
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <p class="mb-0">
+                <i class="fa fa-arrow-right text-primary me-2"></i>Latest
+                Model Vehicles
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <p class="mb-0">
+                <i class="fa fa-arrow-right text-primary me-2"></i>150 Premium
+                City Tours
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <p class="mb-0">
+                <i class="fa fa-arrow-right text-primary me-2"></i>24/7
+                Service
+              </p>
             </div>
           </div>
-
-          <script>
-            // JavaScript to add a bounce effect to the button on click
-            document
-              .querySelector(".getbtn-modern")
-              .addEventListener("click", function () {
-                this.classList.add("clicked");
-
-                // Remove the class after animation is complete
-                setTimeout(() => {
-                  this.classList.remove("clicked");
-                }, 300); // Adjust timing to match the animation duration
-              });
-          </script>
-
-          <!-- Quote Form End -->
+          <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
         </div>
       </div>
     </div>
-    <!-- Navbar & Hero End -->
+  </div>
+  <!-- About End -->
 
-    <!-- About Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-        <div class="row g-5">
-          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px">
-            <div class="position-relative h-100">
-              <img class="img-fluid position-absolute w-100 h-100" src="img/about1.webp" alt="" style="object-fit: cover"/>
-            </div>
-          </div>
-          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-            <h6 class="section-title bg-white text-start text-primary pe-3">
-              About Us
-            </h6>
-            <h1 class="mb-4">
-              Welcome to <span class="text-primary">TRAVELITCH</span>
-            </h1>
-            <p class="mb-4">
-              Welcome to TRAVELITCH, where every journey is crafted to tell a
-              unique story. Based in the heart of Sri Lanka, we specialize in
-              creating unforgettable travel experiences that showcase the
-              island’s natural beauty, rich culture, and hidden gems. Whether
-              you seek relaxation, adventure, or cultural exploration, we are
-              here to guide you.
-            </p>
-            <p class="mb-4">
-              Our mission is to make your travel dreams come true through
-              personalized service and expert planning. With local insights and
-              a commitment to exceptional service, we ensure your journey
-              through Sri Lanka is seamless, memorable, and truly extraordinary.
-            </p>
-            <div class="row gy-2 gx-4 mb-4">
-              <div class="col-sm-6">
-                <p class="mb-0">
-                  <i class="fa fa-arrow-right text-primary me-2"></i>Pick You
-                  Flights
-                </p>
-              </div>
-              <div class="col-sm-6">
-                <p class="mb-0">
-                  <i class="fa fa-arrow-right text-primary me-2"></i>Handpicked
-                  Hotels
-                </p>
-              </div>
-              <div class="col-sm-6">
-                <p class="mb-0">
-                  <i class="fa fa-arrow-right text-primary me-2"></i>5 Star
-                  Accommodations
-                </p>
-              </div>
-              <div class="col-sm-6">
-                <p class="mb-0">
-                  <i class="fa fa-arrow-right text-primary me-2"></i>Latest
-                  Model Vehicles
-                </p>
-              </div>
-              <div class="col-sm-6">
-                <p class="mb-0">
-                  <i class="fa fa-arrow-right text-primary me-2"></i>150 Premium
-                  City Tours
-                </p>
-              </div>
-              <div class="col-sm-6">
-                <p class="mb-0">
-                  <i class="fa fa-arrow-right text-primary me-2"></i>24/7
-                  Service
-                </p>
-              </div>
-            </div>
-            <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
-          </div>
-        </div>
+  <!-- Service Start -->
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+        <h6 class="section-title bg-white text-center text-primary px-3">
+          Services
+        </h6>
+        <h1 class="mb-5">Our Services</h1>
       </div>
-    </div> 
-    <!-- About End -->
-
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-          <h6 class="section-title bg-white text-center text-primary px-3">
-            Services
-          </h6>
-          <h1 class="mb-5">Our Services</h1>
+      <div class="row g-4">
+        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="service-item rounded pt-3">
+            <div class="p-4">
+              <i class="fa fa-3x fa-globe text-primary mb-4"></i>
+              <h5>WorldWide Tours</h5>
+              <p>
+                Offering customized tours to various global destinations,
+                ensuring memorable travel experiences.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="row g-4">
-          <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="service-item rounded pt-3">
-              <div class="p-4">
-                <i class="fa fa-3x fa-globe text-primary mb-4"></i>
-                <h5>WorldWide Tours</h5>
-                <p>
-                  Offering customized tours to various global destinations,
-                  ensuring memorable travel experiences.
-                </p>
-              </div>
+        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+          <div class="service-item rounded pt-3">
+            <div class="p-4">
+              <i class="fa fa-3x fa-hotel text-primary mb-4"></i>
+              <h5>Hotel Reservation</h5>
+              <p>
+                Facilitating hotel bookings, from budget stays to luxury
+                accommodations, ensuring comfort for travelers.
+              </p>
             </div>
           </div>
-          <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="service-item rounded pt-3">
-              <div class="p-4">
-                <i class="fa fa-3x fa-hotel text-primary mb-4"></i>
-                <h5>Hotel Reservation</h5>
-                <p>
-                  Facilitating hotel bookings, from budget stays to luxury
-                  accommodations, ensuring comfort for travelers.
-                </p>
-              </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="service-item rounded pt-3">
+            <div class="p-4">
+              <i class="fa fa-3x fa-user text-primary mb-4"></i>
+              <h5>Travel Guides</h5>
+              <p>
+                Providing expert travel guides to assist clients with local
+                insights and enhance their journey.
+              </p>
             </div>
           </div>
-          <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-            <div class="service-item rounded pt-3">
-              <div class="p-4">
-                <i class="fa fa-3x fa-user text-primary mb-4"></i>
-                <h5>Travel Guides</h5>
-                <p>
-                  Providing expert travel guides to assist clients with local
-                  insights and enhance their journey.
-                </p>
-              </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+          <div class="service-item rounded pt-3">
+            <div class="p-4">
+              <i class="fa fa-3x fa-cog text-primary mb-4"></i>
+              <h5>Event Management</h5>
+              <p>
+                Organizing events, such as corporate gatherings, weddings, or
+                special celebrations.
+              </p>
             </div>
           </div>
-          <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-            <div class="service-item rounded pt-3">
-              <div class="p-4">
-                <i class="fa fa-3x fa-cog text-primary mb-4"></i>
-                <h5>Event Management</h5>
-                <p>
-                  Organizing events, such as corporate gatherings, weddings, or
-                  special celebrations.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+        </div>
+        <!-- <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item rounded pt-3">
                         <div class="p-4">
                             <i class="fa fa-3x fa-globe text-primary mb-4"></i>
@@ -362,7 +376,7 @@
                         </div>
                     </div>
                 </div> -->
-                <!-- <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+        <!-- <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item rounded pt-3">
                         <div class="p-4">
                             <i class="fa fa-3x fa-hotel text-primary mb-4"></i>
@@ -371,7 +385,7 @@
                         </div>
                     </div>
                 </div> -->
-                <!-- <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+        <!-- <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item rounded pt-3">
                         <div class="p-4">
                             <i class="fa fa-3x fa-user text-primary mb-4"></i>
@@ -388,169 +402,166 @@
                             <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
                         </div>
                     </div> -->
-                <!-- </div> -->
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+  <!-- Service End -->
+
+  <!-- Destination Start -->
+  <div class="container-xxl py-5 destination">
+    <div class="container">
+      <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+        <h6 class="section-title bg-white text-center text-primary px-3">
+          Destination
+        </h6>
+        <h1 class="mb-5">Popular Destination</h1>
+      </div>
+      <div class="row g-3">
+        <div class="col-lg-7 col-md-6">
+          <div class="row g-3">
+            <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
+              <a class="position-relative d-block overflow-hidden" href="">
+                <img class="img-fluid" src="img/galle.jpg.jpg" alt="" />
+                <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">
+                  30% OFF
+                </div>
+                <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">
+                  Galle
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
+              <a class="position-relative d-block overflow-hidden" href="">
+                <img class="img-fluid" src="img/sigiriya.jpg" alt="" />
+                <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">
+                  25% OFF
+                </div>
+                <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">
+                  Sigiriya
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
+              <a class="position-relative d-block overflow-hidden" href="">
+                <img class="img-fluid" src="img/tooth-relic.jpg" alt="" />
+                <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">
+                  35% OFF
+                </div>
+                <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">
+                  Temple of Tooth-Relic
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px">
+          <a class="position-relative d-block h-100 overflow-hidden" href="">
+            <img class="img-fluid position-absolute w-100 h-100" src="img/shutterstock.jpg" alt=""
+              style="object-fit: cover" />
+            <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">
+              20% OFF
+            </div>
+            <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">
+              Shutter Stock
+            </div>
+          </a>
         </div>
       </div>
     </div>
-    <!-- Service End -->
+  </div>
+  <!-- Destination Start -->
 
-    <!-- Destination Start -->
-    <div class="container-xxl py-5 destination">
-      <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-          <h6 class="section-title bg-white text-center text-primary px-3">
-            Destination
-          </h6>
-          <h1 class="mb-5">Popular Destination</h1>
-        </div>
-        <div class="row g-3">
-          <div class="col-lg-7 col-md-6">
-            <div class="row g-3">
-              <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
-                <a class="position-relative d-block overflow-hidden" href="">
-                  <img class="img-fluid" src="img/galle.jpg.jpg" alt="" />
-                  <div
-                    class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2"
-                  >
-                    30% OFF
-                  </div>
-                  <div
-                    class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2"
-                  >
-                    Galle
-                  </div>
-                </a>
+  <!-- Package Start -->
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+        <h6 class="section-title bg-white text-center text-primary px-3">
+          Packages
+        </h6>
+        <h1 class="mb-5">Awesome Packages</h1>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <!-- Redesigned Package Item -->
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="package-item-modern">
+            <div class="image-container">
+              <img class="img-fluid" src="img/package-1.jpg" alt="Package 1" />
+              <div class="price-tag">From $149.00</div>
+            </div>
+            <div class="package-content">
+              <h5 class="package-title">Luxurious Beachfront Resort</h5>
+              <p class="package-description">
+                Enjoy a 3-day stay in Galle with stunning ocean views and
+                deluxe accommodations.
+              </p>
+              <div class="package-info d-flex justify-content-between text-muted">
+                <span><i class="fa fa-map-marker-alt me-1 text-primary"></i>Galle</span>
+                <span><i class="fa fa-calendar-alt me-1 text-primary"></i>3days</span>
+                <span><i class="fa fa-user me-1 text-primary"></i>2 Persons</span>
               </div>
-              <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
-                <a class="position-relative d-block overflow-hidden" href="">
-                  <img class="img-fluid" src="img/sigiriya.jpg" alt="" />
-                  <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">
-                    25% OFF
-                  </div>
-                  <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">
-                    Sigiriya
-                  </div>
-                </a>
-              </div>
-              <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
-                <a class="position-relative d-block overflow-hidden" href="">
-                  <img class="img-fluid" src="img/tooth-relic.jpg" alt="" />
-                  <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">
-                    35% OFF
-                  </div>
-                  <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">
-                    Temple of Tooth-Relic
-                  </div>
-                </a>
+              <div class="d-flex justify-content-between mt-3">
+                <a href="#" class="btn-modern">Read More</a>
+                <a href="#" class="btn-modern btn-primary">Book Now</a>
               </div>
             </div>
           </div>
-          <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px">
-            <a class="position-relative d-block h-100 overflow-hidden" href="">
-              <img class="img-fluid position-absolute w-100 h-100" src="img/shutterstock.jpg" alt="" style="object-fit: cover"/>
-              <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">
-                20% OFF
+        </div>
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="package-item-modern">
+            <div class="image-container">
+              <img class="img-fluid" src="img/package-2.jpg" alt="Package 1" />
+              <div class="price-tag">From US $139.00</div>
+            </div>
+            <div class="package-content">
+              <h5 class="package-title">Luxurious Beachfront Resort</h5>
+              <p class="package-description">
+                Enjoy a 2-day stay in Hummanaya with stunning ocean views and
+                deluxe accommodations.
+              </p>
+              <div class="package-info d-flex justify-content-between text-muted">
+                <span><i class="fa fa-map-marker-alt me-1 text-primary"></i>Hummanaya</span>
+                <span><i class="fa fa-calendar-alt me-1 text-primary"></i>2days</span>
+                <span><i class="fa fa-user me-1 text-primary"></i>2 Persons</span>
               </div>
-              <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">
-                Shutter Stock
+              <div class="d-flex justify-content-between mt-3">
+                <a href="#" class="btn-modern">Read More</a>
+                <a href="#" class="btn-modern btn-primary">Book Now</a>
               </div>
-            </a>
+            </div>
           </div>
         </div>
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="package-item-modern">
+            <div class="image-container">
+              <img class="img-fluid" src="img/package-3.jpg" alt="Package 1" />
+              <div class="price-tag">From US $189.00</div>
+            </div>
+            <div class="package-content">
+              <h5 class="package-title">Luxurious Beachfront Resort</h5>
+              <p class="package-description">
+                Enjoy a 3-day stay in Mimure with stunning ocean views and
+                deluxe accommodations.
+              </p>
+              <div class="package-info d-flex justify-content-between text-muted">
+                <span><i class="fa fa-map-marker-alt me-1 text-primary"></i>Mimure</span>
+                <span><i class="fa fa-calendar-alt me-1 text-primary"></i>3days</span>
+                <span><i class="fa fa-user me-1 text-primary"></i>2 Persons</span>
+              </div>
+              <div class="d-flex justify-content-between mt-3">
+                <a href="#" class="btn-modern">Read More</a>
+                <a href="#" class="btn-modern btn-primary">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat for other packages as needed -->
       </div>
     </div>
-    <!-- Destination Start -->
+  </div>
 
-    <!-- Package Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-          <h6 class="section-title bg-white text-center text-primary px-3">
-            Packages
-          </h6>
-          <h1 class="mb-5">Awesome Packages</h1>
-        </div>
-        <div class="row g-4 justify-content-center">
-          <!-- Redesigned Package Item -->
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="package-item-modern">
-              <div class="image-container">
-                <img class="img-fluid" src="img/package-1.jpg" alt="Package 1"/>
-                <div class="price-tag">From $149.00</div>
-              </div>
-              <div class="package-content">
-                <h5 class="package-title">Luxurious Beachfront Resort</h5>
-                <p class="package-description">
-                  Enjoy a 3-day stay in Galle with stunning ocean views and
-                  deluxe accommodations.
-                </p>
-                <div class="package-info d-flex justify-content-between text-muted">
-                  <span><i class="fa fa-map-marker-alt me-1 text-primary"></i>Galle</span>
-                  <span><i class="fa fa-calendar-alt me-1 text-primary"></i>3days</span>
-                  <span><i class="fa fa-user me-1 text-primary"></i>2 Persons</span>
-                </div>
-                <div class="d-flex justify-content-between mt-3">
-                  <a href="#" class="btn-modern">Read More</a>
-                  <a href="#" class="btn-modern btn-primary">Book Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="package-item-modern">
-              <div class="image-container">
-                <img class="img-fluid" src="img/package-2.jpg" alt="Package 1"/>
-                <div class="price-tag">From US $139.00</div>
-              </div>
-              <div class="package-content">
-                <h5 class="package-title">Luxurious Beachfront Resort</h5>
-                <p class="package-description">
-                  Enjoy a 2-day stay in Hummanaya with stunning ocean views and
-                  deluxe accommodations.
-                </p>
-                <div class="package-info d-flex justify-content-between text-muted">
-                  <span><i class="fa fa-map-marker-alt me-1 text-primary"></i>Hummanaya</span>
-                  <span><i class="fa fa-calendar-alt me-1 text-primary"></i>2days</span>
-                  <span><i class="fa fa-user me-1 text-primary"></i>2 Persons</span>
-                </div>
-                <div class="d-flex justify-content-between mt-3">
-                  <a href="#" class="btn-modern">Read More</a>
-                  <a href="#" class="btn-modern btn-primary">Book Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="package-item-modern">
-              <div class="image-container">
-                <img class="img-fluid" src="img/package-3.jpg" alt="Package 1"/>
-                <div class="price-tag">From US $189.00</div>
-              </div>
-              <div class="package-content">
-                <h5 class="package-title">Luxurious Beachfront Resort</h5>
-                <p class="package-description">
-                  Enjoy a 3-day stay in Mimure with stunning ocean views and
-                  deluxe accommodations.
-                </p>
-                <div class="package-info d-flex justify-content-between text-muted">
-                  <span><i class="fa fa-map-marker-alt me-1 text-primary"></i>Mimure</span>
-                  <span><i class="fa fa-calendar-alt me-1 text-primary"></i>3days</span>
-                  <span><i class="fa fa-user me-1 text-primary"></i>2 Persons</span>
-                </div>
-                <div class="d-flex justify-content-between mt-3">
-                  <a href="#" class="btn-modern">Read More</a>
-                  <a href="#" class="btn-modern btn-primary">Book Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Repeat for other packages as needed -->
-        </div>
-      </div>
-    </div>
-
-    <!-- Package Item 2 -->
-    <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+  <!-- Package Item 2 -->
+  <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
             <div class="package-item">
               <div class="overflow-hidden">
                 <img
@@ -599,8 +610,8 @@
             </div>
           </div> -->
 
-    <!-- Package Item 3 -->
-    <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+  <!-- Package Item 3 -->
+  <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
             <div class="package-item">
               <div class="overflow-hidden">
                 <img
@@ -652,554 +663,554 @@
         </div>
       </div>
     </div> -->
-    <!-- Package End -->
+  <!-- Package End -->
 
-    <div class="containerIsland">
-      <h1>Our Island</h1>
-      <p>Sri Lanka</p>
-      <a href="experiences.html" class="view-experiences">View All Experiences &rarr;</a>
+  <div class="containerIsland">
+    <h1>Our Island</h1>
+    <p>Sri Lanka</p>
+    <a href="experiences.html" class="view-experiences">View All Experiences &rarr;</a>
 
-      <script>
-        document.querySelector('.view-experiences').addEventListener('click', function (e) {
-        e.preventDefault(); 
+    <script>
+      document.querySelector('.view-experiences').addEventListener('click', function (e) {
+        e.preventDefault();
         // Perform actions, e.g., logging
         console.log('Button clicked! Redirecting...');
         // Redirect to the desired page
         window.location.href = 'experiences.html';
-        });
+      });
 
-      </script>
+    </script>
 
-      <div class="map-section">
-        <!-- Categories on the left -->
-        <div class="categories category-left">
-          <!-- <div class="category-item">
+    <div class="map-section">
+      <!-- Categories on the left -->
+      <div class="categories category-left">
+        <!-- <div class="category-item">
             <img src="img/beache.jpg" alt="Beaches" />
             <button class="category-btn" data-category="wildlife">Popular Beaches</button>
           </div> -->
-          <div class="category-item">
-            <div class="category-content">
-              <img src="img/beache.jpg" alt="Beaches" />
-              <span class="category-btn" data-category="beaches">Popular Beaches</span>
-            </div>
-          </div>
-
-          <div class="category-item">
-            <div class="category-content">
-              <img src="img/wildlife.jpg" alt="Wildlife" />
-              <span class="category-btn" data-category="wildlife">Wildlife & Nature</span>
-            </div>
-          </div>
-          <div class="category-item">
-            <div class="category-content">
-              <img src="img/adventure.jpg" alt="" />
-              <span class="category-btn" data-category="adventure">Adventure</span>
-            </div>
+        <div class="category-item">
+          <div class="category-content">
+            <img src="img/beache.jpg" alt="Beaches" />
+            <span class="category-btn" data-category="beaches">Popular Beaches</span>
           </div>
         </div>
 
-        <!-- Map of Sri Lanka -->
-        <div id="map" style="width: 100%; height: 500px"></div>
+        <div class="category-item">
+          <div class="category-content">
+            <img src="img/wildlife.jpg" alt="Wildlife" />
+            <span class="category-btn" data-category="wildlife">Wildlife & Nature</span>
+          </div>
+        </div>
+        <div class="category-item">
+          <div class="category-content">
+            <img src="img/adventure.jpg" alt="" />
+            <span class="category-btn" data-category="adventure">Adventure</span>
+          </div>
+        </div>
+      </div>
 
-        <!-- Categories on the right -->
-        <div class="categories category-right">
-          <div class="category-item">
-            <div class="category-content">
-              <img src="img/Culture.jpg" alt="Culture" />
-              <span class="category-btn" data-category="Culture">History & Culture</span>
-            </div>
+      <!-- Map of Sri Lanka -->
+      <div id="map" style="width: 100%; height: 500px"></div>
+
+      <!-- Categories on the right -->
+      <div class="categories category-right">
+        <div class="category-item">
+          <div class="category-content">
+            <img src="img/Culture.jpg" alt="Culture" />
+            <span class="category-btn" data-category="Culture">History & Culture</span>
           </div>
-          <div class="category-item">
-            <div class="category-content">
-              <img src="img/Less-Travelled.png" alt="Lesser Travelled" />
-              <span class="category-btn" data-category="less-travelled">Lesser Travelled</span>
-            </div>
+        </div>
+        <div class="category-item">
+          <div class="category-content">
+            <img src="img/Less-Travelled.png" alt="Lesser Travelled" />
+            <span class="category-btn" data-category="less-travelled">Lesser Travelled</span>
           </div>
-          <div class="category-item">
-            <div class="category-content">
-              <img src="img/Gatronomy.jpg" alt="Gastronomy" />
-              <span class="category-btn" data-category="Gastronomy">Gastronomy</span>
-            </div>
+        </div>
+        <div class="category-item">
+          <div class="category-content">
+            <img src="img/Gatronomy.jpg" alt="Gastronomy" />
+            <span class="category-btn" data-category="Gastronomy">Gastronomy</span>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <script>
-      let map = L.map("map").setView([7.8731, 80.7718], 7); 
+  <script>
+    let map = L.map("map").setView([7.8731, 80.7718], 7);
 
-      // Load and display the OpenStreetMap tiles
-      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        maxZoom: 18,
-        attribution: "© OpenStreetMap contributors",
-      }).addTo(map);
+    // Load and display the OpenStreetMap tiles
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 18,
+      attribution: "© OpenStreetMap contributors",
+    }).addTo(map);
 
-      let markers = [];
+    let markers = [];
 
-      function addMarkers(locations) {
-        //Clear existing markers
-        markers.forEach((marker) => map.removeLayer(marker));
-        markers = [];
+    function addMarkers(locations) {
+      //Clear existing markers
+      markers.forEach((marker) => map.removeLayer(marker));
+      markers = [];
 
-        //Create a bounds object to fit all markers
-        const bounds = L.latLngBounds();
+      //Create a bounds object to fit all markers
+      const bounds = L.latLngBounds();
 
-        locations.forEach((location) => {
-          const marker = L.marker([location.lat, location.lng])
-            .addTo(map)
-            .bindPopup(`<b>${location.name}</b>`); 
-          markers.push(marker);
+      locations.forEach((location) => {
+        const marker = L.marker([location.lat, location.lng])
+          .addTo(map)
+          .bindPopup(`<b>${location.name}</b>`);
+        markers.push(marker);
 
-          //Extend the bounds to include this marker's position
-          bounds.extend([location.lat, location.lng]);
-        });
+        //Extend the bounds to include this marker's position
+        bounds.extend([location.lat, location.lng]);
+      });
 
-        //If there are locations, fly the map to the bounds of the markers
-        if (locations.length > 0) {
-          map.flyToBounds(bounds, { padding: [50, 50] });
-        } else {
-          // If no locations, reset the map view to the default location
-          map.setView([7.8731, 80.7718], 7);
-        }
+      //If there are locations, fly the map to the bounds of the markers
+      if (locations.length > 0) {
+        map.flyToBounds(bounds, { padding: [50, 50] });
+      } else {
+        // If no locations, reset the map view to the default location
+        map.setView([7.8731, 80.7718], 7);
+      }
+    }
+
+    $(".category-btn").click(function () {
+      const category = $(this)
+        .data("category")
+        .toLowerCase()
+        .replace(/\s+/g, "-");
+      let locations = [];
+
+      if (category === "beaches") {
+        locations = [
+          { name: "Unawatuna Beach", lat: 5.9885, lng: 80.2518 },
+          { name: "Mirissa Beach", lat: 5.9484, lng: 80.47 },
+        ];
+      } else if (category === "wildlife") {
+        locations = [
+          { name: "Yala National Park", lat: 6.3638, lng: 81.5218 },
+        ];
+      } else if (category === "adventure") {
+        locations = [
+          {
+            name: "Kitulgala (White Water Rafting)",
+            lat: 6.9882,
+            lng: 80.4216,
+          },
+          { name: "Ella Rock Hiking", lat: 6.8663, lng: 81.0461 },
+        ];
+      } else if (category === "culture") {
+        locations = [
+          { name: "Sigiriya Rock Fortress", lat: 7.9569, lng: 80.7599 },
+          { name: "Temple of the Tooth", lat: 7.2936, lng: 80.6417 },
+        ];
+      } else if (category === "less-travelled") {
+        locations = [
+          { name: "Knuckles Mountain Range", lat: 7.4707, lng: 80.8074 },
+          { name: "Mannar Island", lat: 9.0111, lng: 79.85 },
+        ];
+      } else if (category === "gastronomy") {
+        locations = [
+          { name: "Colombo Street Food Tour", lat: 6.9271, lng: 79.8612 },
+          { name: "Kandy Food Market", lat: 7.2906, lng: 80.6337 },
+        ];
       }
 
-      $(".category-btn").click(function () {
-        const category = $(this)
-          .data("category")
-          .toLowerCase()
-          .replace(/\s+/g, "-"); 
-        let locations = [];
+      addMarkers(locations);
+    });
+  </script>
 
-        if (category === "beaches") {
-          locations = [
-            { name: "Unawatuna Beach", lat: 5.9885, lng: 80.2518 },
-            { name: "Mirissa Beach", lat: 5.9484, lng: 80.47 },
-          ];
-        } else if (category === "wildlife") {
-          locations = [
-            { name: "Yala National Park", lat: 6.3638, lng: 81.5218 },
-          ];
-        } else if (category === "adventure") {
-          locations = [
-            {
-              name: "Kitulgala (White Water Rafting)",
-              lat: 6.9882,
-              lng: 80.4216,
-            },
-            { name: "Ella Rock Hiking", lat: 6.8663, lng: 81.0461 },
-          ];
-        } else if (category === "culture") {
-          locations = [
-            { name: "Sigiriya Rock Fortress", lat: 7.9569, lng: 80.7599 },
-            { name: "Temple of the Tooth", lat: 7.2936, lng: 80.6417 },
-          ];
-        } else if (category === "less-travelled") {
-          locations = [
-            { name: "Knuckles Mountain Range", lat: 7.4707, lng: 80.8074 },
-            { name: "Mannar Island", lat: 9.0111, lng: 79.85 },
-          ];
-        } else if (category === "gastronomy") {
-          locations = [
-            { name: "Colombo Street Food Tour", lat: 6.9271, lng: 79.8612 },
-            { name: "Kandy Food Market", lat: 7.2906, lng: 80.6337 },
-          ];
-        }
-
-        addMarkers(locations);
-      });
-    </script>
-
-    <!-- Booking Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-      <div class="container">
-        <div class="booking p-5">
-          <div class="row g-5 align-items-center">
-            <div class="col-md-6 text-white">
-              <h6 class="text-white text-uppercase">Booking</h6>
-              <h1 class="text-white mb-4">Online Booking</h1>
-              <p class="mb-4">
-                Our website offers a seamless online booking experience,
-                allowing you to reserve tours, accommodations, and services with
-                just a few clicks. Whether it's a world tour, hotel stay, or
-                event management, book instantly and securely from the comfort
-                of your home!
-              </p>
-              <p class="mb-4">
-                Enjoy the convenience of booking your dream vacation or travel
-                services online. Our user-friendly platform allows you to
-                quickly and securely reserve tours, hotels, and more, making
-                your travel planning effortless.
-              </p>
-              <a class="btn btn-outline-light py-3 px-5 mt-2" href="">Read More</a>
-            </div>
-            <div class="col-md-6">
-              <h1 class="text-white mb-4">Book A Tour</h1>
-              <form>
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <div class="form-floating">
-                      <input type="text" class="form-control bg-transparent" id="name" placeholder="Your Name"/>
-                      <label for="name">Your Name</label>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-floating">
-                      <input type="email" class="form-control bg-transparent" id="email" placeholder="Your Email"/>
-                      <label for="email">Your Email</label>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-floating date" id="date3" data-target-input="nearest">
-                      <input type="text" class="form-control bg-transparent datetimepicker-input" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker"/>
-                      <label for="datetime">Date & Time</label>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-floating">
-                      <select class="form-select bg-transparent" id="select1">
-                        <option value="1">Destination 1</option>
-                        <option value="2">Destination 2</option>
-                        <option value="3">Destination 3</option>
-                      </select>
-                      <label for="select1">Destination</label>
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="form-floating">
-                      <textarea class="form-control bg-transparent" placeholder="Special Request" id="message" style="height: 100px"></textarea>
-                      <label for="message">Special Request</label>
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <button class="btn btn-outline-light w-100 py-3" type="submit">
-                      Book Now
-                    </button>
+  <!-- Booking Start -->
+  <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container">
+      <div class="booking p-5">
+        <div class="row g-5 align-items-center">
+          <div class="col-md-6 text-white">
+            <h6 class="text-white text-uppercase">Booking</h6>
+            <h1 class="text-white mb-4">Online Booking</h1>
+            <p class="mb-4">
+              Our website offers a seamless online booking experience,
+              allowing you to reserve tours, accommodations, and services with
+              just a few clicks. Whether it's a world tour, hotel stay, or
+              event management, book instantly and securely from the comfort
+              of your home!
+            </p>
+            <p class="mb-4">
+              Enjoy the convenience of booking your dream vacation or travel
+              services online. Our user-friendly platform allows you to
+              quickly and securely reserve tours, hotels, and more, making
+              your travel planning effortless.
+            </p>
+            <a class="btn btn-outline-light py-3 px-5 mt-2" href="">Read More</a>
+          </div>
+          <div class="col-md-6">
+            <h1 class="text-white mb-4">Book A Tour</h1>
+            <form>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="text" class="form-control bg-transparent" id="name" placeholder="Your Name" />
+                    <label for="name">Your Name</label>
                   </div>
                 </div>
-              </form>
-            </div>
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="email" class="form-control bg-transparent" id="email" placeholder="Your Email" />
+                    <label for="email">Your Email</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-floating date" id="date3" data-target-input="nearest">
+                    <input type="text" class="form-control bg-transparent datetimepicker-input" id="datetime"
+                      placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
+                    <label for="datetime">Date & Time</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <select class="form-select bg-transparent" id="select1">
+                      <option value="1">Destination 1</option>
+                      <option value="2">Destination 2</option>
+                      <option value="3">Destination 3</option>
+                    </select>
+                    <label for="select1">Destination</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-floating">
+                    <textarea class="form-control bg-transparent" placeholder="Special Request" id="message"
+                      style="height: 100px"></textarea>
+                    <label for="message">Special Request</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-outline-light w-100 py-3" type="submit">
+                    Book Now
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
-    <!-- Booking Start -->
+  </div>
+  <!-- Booking Start -->
 
-    <!-- Process Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-        <div class="text-center pb-4 wow fadeInUp" data-wow-delay="0.1s">
-          <h6 class="section-title bg-white text-center text-primary px-3">
-            Process
-          </h6>
-          <h1 class="mb-5">3 Easy Steps</h1>
-        </div>
-        <div class="row gy-5 gx-4 justify-content-center">
-          <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="position-relative border border-primary pt-5 pb-4 px-4">
-              <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px">
-                <i class="fa fa-globe fa-3x text-white"></i>
-              </div>
-              <h5 class="mt-4">Choose A Destination</h5>
-              <hr class="w-25 mx-auto bg-primary mb-1" />
-              <hr class="w-50 mx-auto bg-primary mt-0" />
-              <p class="mb-0">
-                Explore a wide range of stunning travel destinations tailored to
-                your interests, whether it’s a tropical beach, historic city, or
-                serene mountain retreat. Let our curated selections inspire your
-                next adventure and help you find the perfect getaway.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="position-relative border border-primary pt-5 pb-4 px-4">
-              <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px">
-                <i class="fa fa-dollar-sign fa-3x text-white"></i>
-              </div>
-              <h5 class="mt-4">Pay Online</h5>
-              <hr class="w-25 mx-auto bg-primary mb-1" />
-              <hr class="w-50 mx-auto bg-primary mt-0" />
-              <p class="mb-0">
-                Securely complete your booking with easy online payment options,
-                ensuring a hassle-free transaction from the comfort of your
-                home. Enjoy peace of mind with our encrypted payment system,
-                making your travel planning safe and straightforward.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.5s">
-            <div class="position-relative border border-primary pt-5 pb-4 px-4">
-              <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px">
-                <i class="fa fa-plane fa-3x text-white"></i>
-              </div>
-              <h5 class="mt-4">Fly Today</h5>
-              <hr class="w-25 mx-auto bg-primary mb-1" />
-              <hr class="w-50 mx-auto bg-primary mt-0" />
-              <p class="mb-0">
-                Enjoy the flexibility of booking last-minute trips, allowing you
-                to embark and create unforgettable
-                memories. Experience the thrill of spontaneous travel and make
-                the most of every moment with our easy-to-book options. 
-              </p>
-            </div>
-          </div>
-        </div>
+  <!-- Process Start -->
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="text-center pb-4 wow fadeInUp" data-wow-delay="0.1s">
+        <h6 class="section-title bg-white text-center text-primary px-3">
+          Process
+        </h6>
+        <h1 class="mb-5">3 Easy Steps</h1>
       </div>
-    </div>
-    <!-- Process Start -->
-
-    <!-- Team Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-          <h6 class="section-title bg-white text-center text-primary px-3">
-            Travel Guide
-          </h6>
-          <h1 class="mb-5">Meet Our Guide</h1>
-        </div>
-        <div class="row g-4">
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="team-item">
-              <div class="overflow-hidden">
-                <img class="img-fluid" src="img/team-1.jpg" alt="" />
-              </div>
-              <div class="position-relative d-flex justify-content-center" style="margin-top: -19px">
-                <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-              </div>
-              <div class="text-center p-4">
-                <h5 class="mb-0">Mr. Tharindu Nayanasiri</h5>
-                <small>Manager</small>
-              </div>
+      <div class="row gy-5 gx-4 justify-content-center">
+        <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="position-relative border border-primary pt-5 pb-4 px-4">
+            <div
+              class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow"
+              style="width: 100px; height: 100px">
+              <i class="fa fa-globe fa-3x text-white"></i>
             </div>
-          </div>
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="team-item">
-              <div class="overflow-hidden">
-                <img class="img-fluid" src="img/team-2.jpg" alt="" />
-              </div>
-              <div class="position-relative d-flex justify-content-center" style="margin-top: -19px">
-                <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-              </div>
-              <div class="text-center p-4">
-                <h5 class="mb-0">Ms.Rebeka</h5>
-                <small>Assistant Travel Advisor</small>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-            <div class="team-item">
-              <div class="overflow-hidden">
-                <img class="img-fluid" src="img/team-3.jpg" alt=""/>
-              </div>
-              <div class="position-relative d-flex justify-content-center" style="margin-top: -19px">
-                <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-              </div>
-              <div class="text-center p-4">
-                <h5 class="mb-0">Mr.Geeth Weerakkodi</h5>
-                <small>Assistant Travel Consultant</small>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-            <div class="team-item">
-              <div class="overflow-hidden">
-                <img class="img-fluid" src="img/team-4.jpg" alt="" />
-              </div>
-              <div class="position-relative d-flex justify-content-center" style="margin-top: -19px">
-                <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-              </div>
-              <div class="text-center p-4">
-                <h5 class="mb-0">Ms.Ananya Gupta</h5>
-                <small>Quality Service</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Team End -->
-
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-      <div class="container">
-        <div class="text-center">
-          <h6 class="section-title bg-white text-center text-primary px-3">
-            Testimonial
-          </h6>
-          <h1 class="mb-5">Our Clients Say!!!</h1>
-        </div>
-        <div class="owl-carousel testimonial-carousel position-relative">
-          <div class="testimonial-item bg-white text-center border p-4">
-            <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 80px; height: 80px"/>
-            <h5 class="mb-0">John Doe</h5>
-            <p>New York, USA</p>
+            <h5 class="mt-4">Choose A Destination</h5>
+            <hr class="w-25 mx-auto bg-primary mb-1" />
+            <hr class="w-50 mx-auto bg-primary mt-0" />
             <p class="mb-0">
-              The trip organized by Travelitch Sri Lanka exceeded all my
-              expectations. Every detail was perfectly planned, making our
-              vacation unforgettable!”
+              Explore a wide range of stunning travel destinations tailored to
+              your interests, whether it’s a tropical beach, historic city, or
+              serene mountain retreat. Let our curated selections inspire your
+              next adventure and help you find the perfect getaway.
             </p>
           </div>
-          <div class="testimonial-item bg-white text-center border p-4">
-            <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-2.jpg" style="width: 80px; height: 80px"/>
-            <h5 class="mb-0">Mark T.</h5>
-            <p>Spanish</p>
-            <p class="mt-2 mb-0">
-              From booking to travel, everything was smooth and hassle-free. I
-              highly recommend their services!
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.3s">
+          <div class="position-relative border border-primary pt-5 pb-4 px-4">
+            <div
+              class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow"
+              style="width: 100px; height: 100px">
+              <i class="fa fa-dollar-sign fa-3x text-white"></i>
+            </div>
+            <h5 class="mt-4">Pay Online</h5>
+            <hr class="w-25 mx-auto bg-primary mb-1" />
+            <hr class="w-50 mx-auto bg-primary mt-0" />
+            <p class="mb-0">
+              Securely complete your booking with easy online payment options,
+              ensuring a hassle-free transaction from the comfort of your
+              home. Enjoy peace of mind with our encrypted payment system,
+              making your travel planning safe and straightforward.
             </p>
           </div>
-          <div class="testimonial-item bg-white text-center border p-4">
-            <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-3.jpg" style="width: 80px; height: 80px"/>
-            <h5 class="mb-0">Priya S.</h5>
-            <p>India</p>
-            <p class="mt-2 mb-0">
-              The team went above and beyond to ensure we had a fantastic
-              experience. I can’t wait to book my next trip with them!”
-            </p>
-          </div>
-          <div class="testimonial-item bg-white text-center border p-4">
-            <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-4.jpg" style="width: 80px; height: 80px"/>
-            <h5 class="mb-0">Alex K.</h5>
-            <p>Dubai</p>
-            <p class="mt-2 mb-0">
-              Every moment of our vacation was special, thanks to the excellent
-              itinerary provided by Travelitch Agency. Highly recommended!”
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="position-relative border border-primary pt-5 pb-4 px-4">
+            <div
+              class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow"
+              style="width: 100px; height: 100px">
+              <i class="fa fa-plane fa-3x text-white"></i>
+            </div>
+            <h5 class="mt-4">Fly Today</h5>
+            <hr class="w-25 mx-auto bg-primary mb-1" />
+            <hr class="w-50 mx-auto bg-primary mt-0" />
+            <p class="mb-0">
+              Enjoy the flexibility of booking last-minute trips, allowing you
+              to embark and create unforgettable
+              memories. Experience the thrill of spontaneous travel and make
+              the most of every moment with our easy-to-book options.
             </p>
           </div>
         </div>
       </div>
     </div>
-    <!-- Testimonial End -->
+  </div>
+  <!-- Process Start -->
 
-    <!-- Footer Start -->
-    <div
-      class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn"
-      data-wow-delay="0.1s"
-    >
-      <div class="container py-5">
-        <div class="row g-5">
-          <div class="col-lg-3 col-md-6">
-            <h4 class="text-white mb-3">Company</h4>
-            <a class="btn btn-link" href="">About Us</a>
-            <a class="btn btn-link" href="">Contact Us</a>
-            <a class="btn btn-link" href="">Privacy Policy</a>
-            <a class="btn btn-link" href="">Terms & Condition</a>
-            <a class="btn btn-link" href="">FAQs & Help</a>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <h4 class="text-white mb-3">Contact</h4>
-            <p class="mb-2">
-              <i class="fa fa-map-marker-alt me-3"></i>North-Western Province
-            </p>
-            <p class="mb-2">
-              <i class="fa fa-phone-alt me-3"></i>+94 77 111 7298
-            </p>
-            <p class="mb-2">
-              <i class="fa fa-envelope me-3"></i>tharindunayanasiri@gmail.com
-            </p>
-            <div class="d-flex pt-2">
-              <a class="btn btn-outline-light btn-social" href=""
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a class="btn btn-outline-light btn-social" href=""
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a class="btn btn-outline-light btn-social" href=""
-                ><i class="fab fa-youtube"></i
-              ></a>
-              <a class="btn btn-outline-light btn-social" href=""
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
+  <!-- Team Start -->
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+        <h6 class="section-title bg-white text-center text-primary px-3">
+          Travel Guide
+        </h6>
+        <h1 class="mb-5">Meet Our Guide</h1>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="team-item">
+            <div class="overflow-hidden">
+              <img class="img-fluid" src="img/team-1.jpg" alt="" />
             </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <h4 class="text-white mb-3">Gallery</h4>
-            <div class="row g-2 pt-2">
-              <div class="col-4">
-                <img class="img-fluid bg-light p-1" src="img/package-1.jpg" alt=""/>
-              </div>
-              <div class="col-4">
-                <img class="img-fluid bg-light p-1" src="img/package-2.jpg" alt=""/>
-              </div>
-              <div class="col-4">
-                <img class="img-fluid bg-light p-1" src="img/package-3.jpg" alt=""/>
-              </div>
-              <div class="col-4">
-                <img class="img-fluid bg-light p-1" src="img/package-2.jpg" alt=""/>
-              </div>
-              <div class="col-4">
-                <img class="img-fluid bg-light p-1" src="img/package-3.jpg" alt=""/>
-              </div>
-              <div class="col-4">
-                <img class="img-fluid bg-light p-1" src="img/package-1.jpg" alt=""/>
-              </div>
+            <div class="position-relative d-flex justify-content-center" style="margin-top: -19px">
+              <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+              <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+              <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
             </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <h4 class="text-white mb-3">Newsletter</h4>
-            <p>
-              Discover new travel packages, enjoy exclusive discounts, get
-              travel tips from our blog, stay inspired on social media, and book
-              your dream getaway today!
-            </p>
-            <div class="position-relative mx-auto" style="max-width: 400px">
-              <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email"/>
-              <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
-                SignUp
-              </button>
+            <div class="text-center p-4">
+              <h5 class="mb-0">Mr. Tharindu Nayanasiri</h5>
+              <small>Manager</small>
             </div>
           </div>
         </div>
-      </div>
-      <div class="container">
-        <div class="copyright">
-          <div class="row">
-            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-              &copy; <a class="border-bottom" href="#">Travelitch Sri Lanka</a>,
-              All Right Reserved.
-
-              <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-              Designed By <a class="border-bottom">Isu &#10084;&#65039;</a>
+        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+          <div class="team-item">
+            <div class="overflow-hidden">
+              <img class="img-fluid" src="img/team-2.jpg" alt="" />
             </div>
-            <div class="col-md-6 text-center text-md-end">
-              <div class="footer-menu">
-                <a href="">Home</a>
-                <a href="">Cookies</a>
-                <a href="">Help</a>
-                <a href="">FQAs</a>
-              </div>
+            <div class="position-relative d-flex justify-content-center" style="margin-top: -19px">
+              <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+              <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+              <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="text-center p-4">
+              <h5 class="mb-0">Ms.Rebeka</h5>
+              <small>Assistant Travel Advisor</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="team-item">
+            <div class="overflow-hidden">
+              <img class="img-fluid" src="img/team-3.jpg" alt="" />
+            </div>
+            <div class="position-relative d-flex justify-content-center" style="margin-top: -19px">
+              <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+              <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+              <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="text-center p-4">
+              <h5 class="mb-0">Mr.Geeth Weerakkodi</h5>
+              <small>Assistant Travel Consultant</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+          <div class="team-item">
+            <div class="overflow-hidden">
+              <img class="img-fluid" src="img/team-4.jpg" alt="" />
+            </div>
+            <div class="position-relative d-flex justify-content-center" style="margin-top: -19px">
+              <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+              <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+              <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="text-center p-4">
+              <h5 class="mb-0">Ms.Ananya Gupta</h5>
+              <small>Quality Service</small>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Footer End -->
+  </div>
+  <!-- Team End -->
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
-      ><i class="bi bi-arrow-up"></i
-    ></a>
+  <!-- Testimonial Start -->
+  <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container">
+      <div class="text-center">
+        <h6 class="section-title bg-white text-center text-primary px-3">
+          Testimonial
+        </h6>
+        <h1 class="mb-5">Our Clients Say!!!</h1>
+      </div>
+      <div class="owl-carousel testimonial-carousel position-relative">
+        <div class="testimonial-item bg-white text-center border p-4">
+          <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-1.jpg"
+            style="width: 80px; height: 80px" />
+          <h5 class="mb-0">John Doe</h5>
+          <p>New York, USA</p>
+          <p class="mb-0">
+            The trip organized by Travelitch Sri Lanka exceeded all my
+            expectations. Every detail was perfectly planned, making our
+            vacation unforgettable!”
+          </p>
+        </div>
+        <div class="testimonial-item bg-white text-center border p-4">
+          <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-2.jpg"
+            style="width: 80px; height: 80px" />
+          <h5 class="mb-0">Mark T.</h5>
+          <p>Spanish</p>
+          <p class="mt-2 mb-0">
+            From booking to travel, everything was smooth and hassle-free. I
+            highly recommend their services!
+          </p>
+        </div>
+        <div class="testimonial-item bg-white text-center border p-4">
+          <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-3.jpg"
+            style="width: 80px; height: 80px" />
+          <h5 class="mb-0">Priya S.</h5>
+          <p>India</p>
+          <p class="mt-2 mb-0">
+            The team went above and beyond to ensure we had a fantastic
+            experience. I can’t wait to book my next trip with them!”
+          </p>
+        </div>
+        <div class="testimonial-item bg-white text-center border p-4">
+          <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-4.jpg"
+            style="width: 80px; height: 80px" />
+          <h5 class="mb-0">Alex K.</h5>
+          <p>Dubai</p>
+          <p class="mt-2 mb-0">
+            Every moment of our vacation was special, thanks to the excellent
+            itinerary provided by Travelitch Agency. Highly recommended!”
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Testimonial End -->
 
-    <!-- JavaScript Libraries -->
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- Footer Start -->
+  <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-lg-3 col-md-6">
+          <h4 class="text-white mb-3">Company</h4>
+          <a class="btn btn-link" href="">About Us</a>
+          <a class="btn btn-link" href="">Contact Us</a>
+          <a class="btn btn-link" href="">Privacy Policy</a>
+          <a class="btn btn-link" href="">Terms & Condition</a>
+          <a class="btn btn-link" href="">FAQs & Help</a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="text-white mb-3">Contact</h4>
+          <p class="mb-2">
+            <i class="fa fa-map-marker-alt me-3"></i>North-Western Province
+          </p>
+          <p class="mb-2">
+            <i class="fa fa-phone-alt me-3"></i>+94 77 111 7298
+          </p>
+          <p class="mb-2">
+            <i class="fa fa-envelope me-3"></i>tharindunayanasiri@gmail.com
+          </p>
+          <div class="d-flex pt-2">
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="text-white mb-3">Gallery</h4>
+          <div class="row g-2 pt-2">
+            <div class="col-4">
+              <img class="img-fluid bg-light p-1" src="img/package-1.jpg" alt="" />
+            </div>
+            <div class="col-4">
+              <img class="img-fluid bg-light p-1" src="img/package-2.jpg" alt="" />
+            </div>
+            <div class="col-4">
+              <img class="img-fluid bg-light p-1" src="img/package-3.jpg" alt="" />
+            </div>
+            <div class="col-4">
+              <img class="img-fluid bg-light p-1" src="img/package-2.jpg" alt="" />
+            </div>
+            <div class="col-4">
+              <img class="img-fluid bg-light p-1" src="img/package-3.jpg" alt="" />
+            </div>
+            <div class="col-4">
+              <img class="img-fluid bg-light p-1" src="img/package-1.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="text-white mb-3">Newsletter</h4>
+          <p>
+            Discover new travel packages, enjoy exclusive discounts, get
+            travel tips from our blog, stay inspired on social media, and book
+            your dream getaway today!
+          </p>
+          <div class="position-relative mx-auto" style="max-width: 400px">
+            <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email" />
+            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
+              SignUp
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="copyright">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            &copy; <a class="border-bottom" href="#">Travelitch Sri Lanka</a>,
+            All Right Reserved.
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-    <!-- <script src="js/map.js"></script> -->
-  </body>
+            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+            Designed By <a class="border-bottom">Isu &#10084;&#65039;</a>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <div class="footer-menu">
+              <a href="">Home</a>
+              <a href="">Cookies</a>
+              <a href="">Help</a>
+              <a href="">FQAs</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer End -->
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/tempusdominus/js/moment.min.js"></script>
+  <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+  <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
+  <!-- <script src="js/map.js"></script> -->
+</body>
+
 </html>
