@@ -93,11 +93,5 @@
 })(jQuery);
 
 
-document.querySelectorAll('.btn-primary').forEach(button => {
-    button.addEventListener('click', (event) => {
-        event.preventDefault();
-        // Display modal dialog code here
-        alert("Show more information in a modal dialog.");
-    });
-});
+
 
